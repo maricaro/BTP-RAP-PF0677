@@ -13,7 +13,7 @@
 define root view entity ZHEADER_R_0677 
 as select from ztheader_0677_a
 
-  //composition [1..*] of Z_R_ITEMS_1075        as _Items
+  composition [1..*] of ZITEMS_R_0677        as _Items
 
   association [1]    to /DMO/I_Overall_Status_VH as _Status on $projection.OrderStatus = _Status.OverallStatus
   association [0..1] to I_Country             as _Country   on $projection.Country = _Country.Country
@@ -50,7 +50,7 @@ as select from ztheader_0677_a
       last_changed_at       as LastChangedAt,
       
   // Make association public
-    // /_Items,
+      _Items,
       _Status,
       _Country
 }
