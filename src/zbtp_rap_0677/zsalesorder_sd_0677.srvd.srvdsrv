@@ -1,0 +1,5 @@
+@EndUserText.label: 'SalesOrder - Service Definition'
+define service ZSALESORDER_SD_0677 {
+  expose ZHEADER_C_0677 as SalesOrder;
+  expose ZITEMS_C_0677  as SalesOrderItem;
+}
