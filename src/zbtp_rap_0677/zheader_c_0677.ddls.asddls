@@ -5,6 +5,8 @@
 @Metadata.allowExtensions: true
 @Search.searchable: true
 
+
+// capa de consumo
 define root view entity ZHEADER_C_0677
 provider contract transactional_query
 as projection on ZHEADER_R_0677
@@ -51,6 +53,6 @@ as projection on ZHEADER_R_0677
 
       /* Associations */
       _Country,
-      _Items, // : redirected to composition child Z_C_ITEMS_1075,
+      _Items : redirected to composition child ZITEMS_C_0677,
       _Status
 }
